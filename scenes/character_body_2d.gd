@@ -1,3 +1,5 @@
+#comment
+
 extends CharacterBody2D
 
 

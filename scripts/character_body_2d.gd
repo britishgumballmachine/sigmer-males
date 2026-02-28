@@ -13,7 +13,7 @@ func double_jump():
 
 
 var SPEED = 250.0
-var JUMP_VELOCITY = -300.0
+var JUMP_VELOCITY = -500.0
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 

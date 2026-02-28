@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c18ynwqu0jqvd"]
+
+[ext_resource type="Script" uid="uid://61emlinx2la4" path="res://scripts/disappearing_platforms.gd" id="1_r6x7o"]
+[ext_resource type="Texture2D" uid="uid://bdub7b2j3nadr" path="res://assets/New Piskel (9).png" id="2_bnedf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr7x5"]
+size = Vector2(53, 19)
+
+[node name="Area2D" type="AnimatableBody2D"]
+script = ExtResource("1_r6x7o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(14.75, 6.25)
+scale = Vector2(2.28261, 3.5)
+texture = ExtResource("2_bnedf")
+region_enabled = true
+region_rect = Rect2(0.871605, 8.9353, 23.1975, 5.04431)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14.5, 6.5)
+shape = SubResource("RectangleShape2D_vr7x5")
+one_way_collision = true

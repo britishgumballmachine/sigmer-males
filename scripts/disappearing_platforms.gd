@@ -1,4 +1,4 @@
-extends Area2D
+extends AnimatableBody2D
 
 @onready var timer: Timer = $Timer
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D

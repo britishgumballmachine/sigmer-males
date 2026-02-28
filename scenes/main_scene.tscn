@@ -1516,5 +1516,5 @@ texture_scale = 14.81
 [node name="CanvasModulate" type="CanvasModulate" parent="CharacterBody2D" unique_id=969125483]
 color = Color(0.47, 0.47, 0.47, 1)
 
-[node name="Disappearing Platform" parent="." unique_id=1511082276 instance=ExtResource("13_4w45t")]
-position = Vector2(2321, 584)
+[node name="Disappearing Platform" parent="." instance=ExtResource("13_4w45t")]
+position = Vector2(2285, 618)

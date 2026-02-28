@@ -1517,4 +1517,4 @@ texture_scale = 14.81
 color = Color(0.47, 0.47, 0.47, 1)
 
 [node name="Disappearing Platform" parent="." instance=ExtResource("13_4w45t")]
-position = Vector2(2321, 584)
+position = Vector2(2285, 618)

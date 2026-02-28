@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://buamon6g6sxv6"]
+[gd_scene load_steps=5 format=3 uid="uid://buamon6g6sxv6"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" uid="uid://ctplm3fd7xua6" path="res://scenes/character_body_2d.gd" id="1_pw63i"]
+[ext_resource type="Texture2D" uid="uid://ctbaq0lrbeis5" path="res://icon.svg" id="1_w2twt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pw63i"]
+size = Vector2(139, 133)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ykc4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w2twt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main Scene" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_pw63i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_pw63i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_7ykc4")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

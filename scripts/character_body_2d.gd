@@ -13,7 +13,7 @@ func double_jump():
 
 
 var SPEED = 250.0
-var JUMP_VELOCITY = -400.0
+var JUMP_VELOCITY = -300.0
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
@@ -50,7 +50,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	if Input.is_action_just_pressed("menu"):
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func die():
 	animated_sprite_2d.play("die")

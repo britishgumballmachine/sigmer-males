@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8k0432skh3gm"]
+
+[ext_resource type="Texture2D" uid="uid://b5m7mi3cfrxey" path="res://assets/pixil-frame-0_15.png" id="1_dw3wf"]
+[ext_resource type="Script" uid="uid://bs0s7x08pm111" path="res://killzone.gd" id="2_snnrc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lagav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dw3wf")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqvv5"]
+size = Vector2(33, 32)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(-6, 0)
+scale = Vector2(0.727273, 1)
+sprite_frames = SubResource("SpriteFrames_lagav")
+animation = &"new_animation"
+
+[node name="Killzone" type="Area2D" parent="."]
+script = ExtResource("2_snnrc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("RectangleShape2D_wqvv5")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://c355wnj7fb6rj"]
+
+[ext_resource type="PackedScene" uid="uid://c4jkgpav0p7ct" path="res://scenes/kill.tscn" id="1_xbcdo"]
+[ext_resource type="Texture2D" uid="uid://cedkb2amc8bup" path="res://assets/New Piskel (15).png" id="2_bflj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kd5gq"]
+size = Vector2(9, 13.25)
+
+[node name="Area2D" instance=ExtResource("1_xbcdo")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture_filter = 1
+position = Vector2(20.5, -28)
+scale = Vector2(2.84375, 2.75)
+texture = ExtResource("2_bflj7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(-12.5, 9.625)
+shape = SubResource("RectangleShape2D_kd5gq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="3"]
+position = Vector2(11, 9)
+shape = SubResource("RectangleShape2D_kd5gq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." index="4"]
+position = Vector2(34, 9)
+shape = SubResource("RectangleShape2D_kd5gq")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." index="5"]
+position = Vector2(57, 9)
+shape = SubResource("RectangleShape2D_kd5gq")

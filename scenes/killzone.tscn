@@ -1,3 +1,5 @@
-[gd_scene format=3 uid="uid://rulqkevkfjfx"]
+[gd_scene load_steps=2 format=3 uid="uid://rulqkevkfjfx"]
 
-[node name="Killzone"]
+[ext_resource type="PackedScene" uid="uid://rulqkevkfjfx" path="res://scenes/killzone.tscn" id="1_xlapc"]
+
+[node name="Killzone" instance=ExtResource("1_xlapc")]
